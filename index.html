@@ -1,48 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>GrumbleBot - The Complaining Smart Speaker</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+    <!-- Open Graph tags for link preview -->
+    <meta property="og:title" content="GrumbleBot - The Complaining Smart Speaker" />
+    <meta property="og:description" content="Meet GrumbleBot — your mood-driven, witty, and sarcastic smart speaker!" />
+    <meta property="og:image" content="C:\Users\hp\OneDrive\Documents\GitHub\grumblebot\image/grumblebot-preview.png" />
+    <meta property="og:url" content="https://amarashique726-bit.github.io/grumblebot" />
+    <meta property="og:type" content="website" />
+
+    <!-- For Twitter (X) cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GrumbleBot - The Complaining Smart Speaker" />
+    <meta name="twitter:description"
+        content="Meet GrumbleBot — your mood-driven, witty, and sarcastic smart speaker!" />
+    <meta name="twitter:image"
+        content="C:\Users\hp\OneDrive\Documents\GitHub\grumblebot\image/grumblebot-preview.png" />
+
+    <meta charset="UTF-8" />
+    <title>GrumbleBot - The Complaining Smart Speaker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body data-mood="medium" class="light-mode">
-  <div class="container">
-    <h1>
-      GrumbleBot
-      <span id="mood-face">🙄</span>
-    </h1>
+    <div class="container">
+        <h1>
+            GrumbleBot
+            <span id="mood-face">🙄</span>
+        </h1>
 
-    <div id="waveform" style="display: none;">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+        <div id="waveform" style="display: none;">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <div class="controls">
+            <label for="moodSelect">Mood:</label>
+            <select id="moodSelect">
+                <option value="low">Low Whine</option>
+                <option value="medium" selected>Medium Whine</option>
+                <option value="high">Extreme Diva</option>
+            </select>
+
+            <button id="talkBtn">Talk</button>
+            <button id="stopBtn" disabled>Stop</button>
+            <button id="darkModeToggle" title="Toggle dark mode">🌙</button>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="textInput" placeholder="Or type your complaint here..." />
+            <button id="sendBtn">Send</button>
+        </div>
+
+        <div id="chat"></div>
+        <div id="status">Waiting...</div>
     </div>
 
-    <div class="controls">
-      <label for="moodSelect">Mood:</label>
-      <select id="moodSelect">
-        <option value="low">Low Whine</option>
-        <option value="medium" selected>Medium Whine</option>
-        <option value="high">Extreme Diva</option>
-      </select>
+    <audio id="sighSound" src="https://www.soundboard.com/mediafiles/249339-b9d9-43c2-bfbe-d45091702f74.mp3"
+        preload="auto"></audio>
 
-      <button id="talkBtn">Talk</button>
-      <button id="stopBtn" disabled>Stop</button>
-      <button id="darkModeToggle" title="Toggle dark mode">🌙</button>
-    </div>
-
-    <div class="input-area">
-      <input type="text" id="textInput" placeholder="Or type your complaint here..." />
-      <button id="sendBtn">Send</button>
-    </div>
-
-    <div id="chat"></div>
-    <div id="status">Waiting...</div>
-  </div>
-
-  <audio id="sighSound" src="https://www.soundboard.com/mediafiles/249339-b9d9-43c2-bfbe-d45091702f74.mp3" preload="auto"></audio>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
